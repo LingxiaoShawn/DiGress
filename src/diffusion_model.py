@@ -7,11 +7,11 @@ import numpy as np
 import pytorch_lightning as pl
 import wandb
 
-from models.transformer_model import GraphTransformer
-from diffusion.noise_schedule import PredefinedNoiseSchedule
-from src.diffusion import diffusion_utils
-from metrics.train_metrics import TrainLoss
-from metrics.abstract_metrics import SumExceptBatchMetric, SumExceptBatchMSE, NLL
+from .models.transformer_model import GraphTransformer
+from .diffusion.noise_schedule import PredefinedNoiseSchedule
+from .diffusion import diffusion_utils
+from .metrics.train_metrics import TrainLoss
+from .metrics.abstract_metrics import SumExceptBatchMetric, SumExceptBatchMSE, NLL
 from src import utils
 
 
