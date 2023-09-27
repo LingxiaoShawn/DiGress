@@ -6,11 +6,12 @@ general:
     evaluate_all_checkpoints: False
     test_only: null
 train:
-    n_epochs: 2000
+    n_epochs: 500 #2000 
     batch_size: 512
     save_model: True
 model:
     n_layers: 7
     lambda_train: [5, 0]
+    extra_features: null   # test the performance without extra features
 dataset:
     remove_h: False

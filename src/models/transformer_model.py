@@ -143,6 +143,11 @@ class NodeEdgeBlock(nn.Module):
         e_mask1 = x_mask.unsqueeze(2)           # bs, n, 1, 1
         e_mask2 = x_mask.unsqueeze(1)           # bs, 1, n, 1
 
+        # print(x_mask.sum() / x_mask.numel())
+        # e_mask = e_mask1 * e_mask2
+        # print(e_mask.sum() / e_mask.numel())
+        # exit(0)
+
         # 1. Map X to keys and queries
         Q = self.q(X) * x_mask           # (bs, n, dx)
         K = self.k(X) * x_mask           # (bs, n, dx)
